@@ -1,17 +1,8 @@
 from django.db import models
+from .category import Category
 from django.contrib.auth.models import User
 
-class Category(models.Model):
-    name=models.CharField(max_length=50,null=False,blank=False)
 
-    class Meta:
-        db_table='Category'
-        verbose_name='category'
-        verbose_name_plural='Categories'
-
-    def __str__(self):
-        return self.name
-        
 class Portfolio(models.Model):
     name=models.CharField(max_length=50)
     picture=models.ImageField(upload_to='portfolio_images')
@@ -27,4 +18,3 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return self.name
-
