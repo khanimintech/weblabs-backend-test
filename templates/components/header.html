@@ -1,4 +1,4 @@
-
+{% load static %}
 
     <!-- ======= Top Bar ======= -->
     <section id="topbar" class="d-flex align-items-center">
@@ -20,14 +20,13 @@
 
             <h1 class="logo me-auto">
                 <a href="#" class="logo">
-                    <!-- <span>WEBL<span style="color: #0DCCE0;">A</span>BS</span> -->
-                    <img src="assets/img/lg2.png" alt="" class="img-fluid">
+                    <img src="{% static 'img/lg2.png' %}" alt="" class="img-fluid">
                 </a>
             </h1>
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="" href="{% url 'home' %}">Əsas səhifə</a></li>
-                    <li><a class="" href="#about">Haqqımızda</a></li>
+                    <li><a class="" href="{% url 'about' %}">Haqqımızda</a></li>
                     <li class="dropdown"><a href="#services">Xidmətlər<i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="#">Saytlatın Hazırlanmasi</a></li>
@@ -49,29 +48,3 @@
         </div>
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex align-items-center">
-
-        <div class="container">
-            <div class="row">
-                <div class="d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up"><i>Web saytların hazırlanması</i></h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400"><span>Işinizi bizə həvalə edin və ən qısa
-                            müddət ərzində
-                            sizə ən son texnologiyalarla hazırlanmış vəziyyətdə
-                            saytı təhvil verək</span></h2>
-                    <h4 class="pt-3" data-aos="fade-up" data-aos-delay="500">İşiniz İşimizdir!</h4>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <div class="">
-                            <a href="form.html" target="blank_"
-                                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center rounded">
-                                <span>Bizə Müraciət Edin</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section><!-- End Hero -->
