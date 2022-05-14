@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<!-- shop -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <!-- sidebar -->
+            <div class="col-lg-3">
+                <!-- categories -->
+                <div class="mb-30">
+                    <h4 class="mb-3">Shop by Categories</h4>
+                    <ul class="pl-0 shop-list list-unstyled">
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Women’s Clothing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Man Fashion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Kid’s Clothing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Watches & Jewelry</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Bags & Shoes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Toys & Kids</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Electronics</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
+                                <span>Computers</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- product-list -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <!-- product -->
+
+                    {% for project in projects %}
+                    <div class="col-lg-6 col-sm-6 mb-4">
+                        <div class="product text-center">
+                            <div class="product-thumb">
+                                <div class="overflow-hidden position-relative">
+                                    <a href="product-single.html">
+                                        <img class="img-fluid w-100 mb-3 img-first" src="{{project.picture.url}}"
+                                            alt="product-img">
+                                        <!-- <img class="img-fluid w-100 mb-3 img-second" src="{{project.picture.url}}" alt="product-img"> -->
+                                    </a>
+                                </div>
+                                <div class="product-hover-overlay">
+                                    <a href="#" class="product-icon favorite" data-toggle="tooltip"
+                                        data-placement="left" title="Wishlist"><i class="ti-heart"></i></a>
+                                    <a href="#" class="product-icon cart" data-toggle="tooltip" data-placement="left"
+                                        title="Compare"><i class="ti-direction-alt"></i></a>
+                                    <a data-vbtype="inline" href="#quickView" class="product-icon view venobox"
+                                        data-toggle="tooltip" data-placement="left" title="Quick View"><i
+                                            class="ti-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="h5"><a class="text-color" href="product-single.html">{{project.name}}</a>
+                                </h3>
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- //end of product -->
+
+                    <!-- pagination -->
+                    <div class="col-12 mt-5">
+                        {% if projects.has_other_pages %}
+                        <nav>
+                            <ul class="pagination justify-content-center">
+
+                                {% if projects.has_previous %}
+                                <li class="page-item"><a class="page-link" href="?page={{ projects.previous_page_number }}"><i class="fa-solid fa-arrow-left"></i></a>
+                                {% else %}
+                                <li class="page-item disabled"><a class="page-link" href="#"><i class="fa-solid fa-arrow-left"></i></a>
+                                {% endif %}
+
+                                {% for i in projects.paginator.page_range %}
+
+                                {% if projects.number == i %}
+                                <li class="page-item active"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                                {% else %}
+                                <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                                {% endif %}
+                                {% endfor %}
+
+                                {% if projects.has_next %}
+                                <li class="page-item"><a class="page-link" href="?page={{ projects.next_page_number }}"><i class="fa-solid fa-arrow-right"></i></a>
+                                {% else %}
+                                <li class="page-item disabled"><a class="page-link" href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                {% endif %}
+                                </li>
+                            </ul>
+                        </nav>
+                        {% endif %}
+                    </div>
+                    <!-- //end of pagination -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /shop -->
+
+{% endblock %}
