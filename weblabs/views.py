@@ -15,8 +15,11 @@ def about(request):
     return render (request, 'about.html')
 
 def all_projects(request):
+    search=request.GET.get('search')
     number=request.GET.get('page')
     projects=Portfolio.objects.order_by('-created_date')
+    if search:
+        projects=projects.filter(name__icontains=search)
     projects=Paginator(projects, 4)
     context={
         'projects':projects.get_page(number)

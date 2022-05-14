@@ -3,12 +3,19 @@
 
 {% block body %}
 
-<!-- shop -->
+<!-- projects -->
 <section class="section">
     <div class="container">
         <div class="row">
             <!-- sidebar -->
             <div class="col-lg-3">
+                <!-- search project -->
+                <div class="position-relative mb-5">
+                    <form method="GET">
+                        <input type="search" class="form-control rounded-0" placeholder="Search..." name="search">
+                        <button type="submit" class="search-icon pr-3 r-0"><i class="fa-solid fa-magnifying-glass text-color"></i></button>
+                    </form>
+                </div>
                 <!-- categories -->
                 <div class="mb-30">
                     <h4 class="mb-3">Shop by Categories</h4>
@@ -100,25 +107,31 @@
                             <ul class="pagination justify-content-center">
 
                                 {% if projects.has_previous %}
-                                <li class="page-item"><a class="page-link" href="?page={{ projects.previous_page_number }}"><i class="fa-solid fa-arrow-left"></i></a>
-                                {% else %}
-                                <li class="page-item disabled"><a class="page-link" href="#"><i class="fa-solid fa-arrow-left"></i></a>
-                                {% endif %}
+                                <li class="page-item"><a class="page-link"
+                                        href="?search={{request.GET.search}}&page={{ projects.previous_page_number }}"><i
+                                            class="fa-solid fa-arrow-left"></i></a>
+                                    {% else %}
+                                <li class="page-item disabled"><a class="page-link" href="#"><i
+                                            class="fa-solid fa-arrow-left"></i></a>
+                                    {% endif %}
 
-                                {% for i in projects.paginator.page_range %}
+                                    {% for i in projects.paginator.page_range %}
 
-                                {% if projects.number == i %}
-                                <li class="page-item active"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                                    {% if projects.number == i %}
+                                <li class="page-item active"><a class="page-link" href="?search={{request.GET.search}}&page={{i}}">{{i}}</a></li>
                                 {% else %}
-                                <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                                <li class="page-item"><a class="page-link" href="?search={{request.GET.search}}&page={{i}}">{{i}}</a></li>
                                 {% endif %}
                                 {% endfor %}
 
                                 {% if projects.has_next %}
-                                <li class="page-item"><a class="page-link" href="?page={{ projects.next_page_number }}"><i class="fa-solid fa-arrow-right"></i></a>
-                                {% else %}
-                                <li class="page-item disabled"><a class="page-link" href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                                {% endif %}
+                                <li class="page-item"><a class="page-link"
+                                        href="?search={{request.GET.search}}&page={{ projects.next_page_number }}"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                    {% else %}
+                                <li class="page-item disabled"><a class="page-link" href="#"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                    {% endif %}
                                 </li>
                             </ul>
                         </nav>
@@ -130,6 +143,6 @@
         </div>
     </div>
 </section>
-<!-- /shop -->
+<!-- /projects -->
 
 {% endblock %}
