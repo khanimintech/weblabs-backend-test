@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact</h2>
+        </div>
+        
+        <div class="contact-bg" style="background-image: url('assets/img/footer-bg.png')">
+            <div class="row col-center">
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex">
+                    <form method="POST" class="php-email-form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Ad</label>
+                                {{form.name}}
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">Soyad</label>
+                                {{form.surname}}
+                            </div>
+                            <div class="form-group col-md-6 mt-3 mt-md-0">
+                                <label for="name">E-ünvan</label>
+                                {{form.email}}
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="name">Mesaj</label>
+                            {{form.message}}
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-get-started">Send Message
+                           </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+{% endblock %}
