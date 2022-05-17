@@ -17,7 +17,13 @@ def home(request):
     return render (request, 'index.html',context)
 
 def about(request):
-    return render (request, 'about.html')
+    projects=Portfolio.objects.all()
+    projects_count=projects.count()
+    context={
+        'projects_count':projects_count,
+    }
+   
+    return render (request, 'about.html', context)
 
 def all_projects(request):
     search=request.GET.get('search')
