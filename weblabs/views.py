@@ -1,6 +1,8 @@
+import re
+from sre_constants import CATEGORY
 from django.shortcuts import render
 from .models import Portfolio, Contact
-from weblabs.models import Contact
+from weblabs.models import Contact,Category
 from django.core.paginator import Paginator
 from .forms import ContactForm
 from django.contrib import messages
@@ -29,13 +31,27 @@ def all_projects(request):
     search=request.GET.get('search')
     number=request.GET.get('page')
     projects=Portfolio.objects.order_by('-created_date')
+    categories=Category.objects.all()
     if search:
         projects=projects.filter(name__icontains=search)
     projects=Paginator(projects, 4)
     context={
-        'projects':projects.get_page(number)
+        'projects':projects.get_page(number),
+        'categories':categories
     }
     return render(request, 'projects.html',context)
+
+def category_detail(request, category_slug):
+    projects=Portfolio.objects.all().filter(category__slug=category_slug)
+    categories=Category.objects.all()
+
+    context={
+        'projects':projects,
+        'categories':categories
+    }
+    
+    return render(request, 'projects.html', context)
+    
 
 def contact(request):
     form=ContactForm(request.POST or None)

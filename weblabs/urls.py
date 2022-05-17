@@ -6,4 +6,5 @@ urlpatterns = [
     path('about', views.about, name="about"),
     path('allprojects', views.all_projects, name="all_projects"),
     path('contact',views.contact,name='contact'),
+    path('categories/<slug:category_slug>',views.category_detail,name='projects_by_category'),
 ] 

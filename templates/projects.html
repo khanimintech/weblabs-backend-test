@@ -20,46 +20,13 @@
                 <div class="mb-30">
                     <h4 class="mb-3">Shop by Categories</h4>
                     <ul class="pl-0 shop-list list-unstyled">
+                        {% for category in categories %}
                         <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Women’s Clothing</span>
+                            <a href="{% url 'projects_by_category' category.slug %}" class="d-flex py-2 text-gray justify-content-between">
+                                <span>{{category.name}}</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Man Fashion</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Kid’s Clothing</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Watches & Jewelry</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Bags & Shoes</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Toys & Kids</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Electronics</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="d-flex py-2 text-gray justify-content-between">
-                                <span>Computers</span>
-                            </a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
