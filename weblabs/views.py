@@ -20,9 +20,12 @@ def home(request):
 
 def about(request):
     projects=Portfolio.objects.all()
-    projects_count=projects.count()
+    completed_projects_count=Portfolio.objects.filter(status=True).count()
+    not_completed_projects_count=Portfolio.objects.filter(status=False).count()
+
     context={
-        'projects_count':projects_count,
+        'completed_projects_count':completed_projects_count,
+        'not_completed_projects_count':not_completed_projects_count
     }
    
     return render (request, 'about.html', context)
