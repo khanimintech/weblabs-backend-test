@@ -30,6 +30,10 @@ def about(request):
    
     return render (request, 'about.html', context)
 
+def services(request):
+
+    return render (request, 'index.html')
+
 def all_projects(request):
     search=request.GET.get('search')
     number=request.GET.get('page')

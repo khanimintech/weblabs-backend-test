@@ -50,7 +50,7 @@
     padding-bottom: 20px;
     position: relative;
   }
-  .section-title h2::before {
+  /* .section-title h2::before {
     content: "";
     position: absolute;
     display: block;
@@ -59,7 +59,7 @@
     background: #ddd;
     bottom: 1px;
     left: calc(50% - 60px);
-  }
+  } */
 
   .section-title p {
     font-size: 14px;
