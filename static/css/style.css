@@ -11,12 +11,12 @@
   }
   
   a {
-    color: #4154f1;
+    color: #0A6D78;
     text-decoration: none;
   }
   
   a:hover {
-    color: #717ff5;
+    color: #218c74;
     text-decoration: none;
   }
   
@@ -783,7 +783,6 @@
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #012970;
   font-weight: 700;
 }
 
@@ -803,7 +802,7 @@
 
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
-  background: #4154f1;
+  background: #0A6D78;;
   margin: 10px 2px;
   width: 36px;
   height: 36px;
@@ -820,7 +819,7 @@
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: #5969f3;
+  background: #0DCCE0;;
 }
 
 .portfolio .portfolio-wrap:hover img {
