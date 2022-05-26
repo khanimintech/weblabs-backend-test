@@ -32,5 +32,4 @@ EXPOSE 8000
 # Start uWSGI
 #CMD [ "/venv/bin/uwsgi", "--ini", "/code/uwsgi.ini"]
 #CMD [ "/venv/bin/daphne", "-b", "0.0.0.0", "-p", "8030", "dr_agro.asgi:application"]
-# CMD [ "/venv/bin/uwsgi", "--ini", "/code/uwsgi.ini"]
-CMD [ "gunicorn", "--bind", "0.0.0.0", "-p", "8000",  "config.wsgi" ]
+CMD [ "/venv/bin/uwsgi", "--ini", "/code/uwsgi.ini"]
