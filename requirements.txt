@@ -9,3 +9,4 @@ django-modeltranslation==0.17.5
 django-rosetta==0.9.8
 django-ckeditor==6.4.0
 gunicorn==19.9.0
+uWSGI==2.0.20
