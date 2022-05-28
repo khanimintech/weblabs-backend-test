@@ -5,22 +5,22 @@ from .models import Contact
 class ContactForm(forms.ModelForm):
     name = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'First Name'    
+        'placeholder': 'Ad..'    
 
     })) 
     surname = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Last Name'    
+        'placeholder': 'Soyad..'    
 
     }))
     email = forms.EmailField(widget=forms.EmailInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Email'    
+        'placeholder': 'nümunə@gmail.com'    
 
     }))
     message = forms.CharField(widget=forms.Textarea(attrs={
         'class': 'form-control',
-        'placeholder': 'Message...'    
+        'placeholder': 'Mesaj...'    
 
     }))
 
