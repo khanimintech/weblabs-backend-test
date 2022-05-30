@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <ol>
+      <li><a class="" href="{% url 'home' %}">Əsas səhifə</a></li>
+      <li>Xidmətlər</li>
+    </ol>
+    <h2>Xidmətlər</h2>
+
+  </div>
+</section><!-- End Breadcrumbs -->
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+        <div class="box" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'img/services-1.png' %}" class="img-fluid" alt="">
+          <h3>Saytların Hazırlanması</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+        <div class="box" data-aos="fade-up" data-aos-delay="400">
+          <img src="{% static 'img/services-3.png' %}" class="img-fluid" alt="">
+          <h3>Texniki dəstək</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+        <div class="box" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'img/services-4.png' %}" class="img-fluid" alt="">
+          <h3>Seo Xidmeti</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row col-center">
+      <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+        <div class="box" data-aos="fade-up" data-aos-delay="400">
+          <img src="{% static 'img/services-5.png' %}" class="img-fluid" alt="">
+          <h3>Dizayn xidməti</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+          <img src="{% static 'img/services-6.png' %}" class="img-fluid" alt="">
+          <h3>SMM Xİdməti</h3>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  </div>
+
+</section><!-- End Values Section -->
+
+{% endblock %}

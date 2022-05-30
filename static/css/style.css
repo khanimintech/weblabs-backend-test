@@ -105,7 +105,7 @@
   --------------------------------------------------------------*/
   .breadcrumbs {
     padding: 15px 0;
-    background: #012970;
+    background: #0A6D78;
     min-height: 40px;
     margin-top: 82px;
     color: #fff;
@@ -1285,6 +1285,9 @@
     color: white;
   }
   
+  .footer .footer-top .footer-contact i {
+    color: #34ace0;
+  }
   .footer .copyright {
     text-align: center;
     color: white;
@@ -1297,11 +1300,7 @@
     color: white;
   }
   
-  .footer .credits a {
-    text-align: right;
-    color: #0A6D78;
-  }
-  
+ 
   
   /*btn*/
     

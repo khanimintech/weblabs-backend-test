@@ -11,7 +11,9 @@
         <div class="row">
             <div class="d-flex flex-column justify-content-center">
                 <h1 data-aos="fade-up"><i>Veb saytların hazırlanması</i></h1>
-                <h2 data-aos="fade-up" data-aos-delay="400"><span>Öz Biznesinizi onlayn məkanda tanıtmaq üçün bizim peşəkar komandanın xidmətlərindən yararlana bilərsiz.Bizim missiyamız ən müasir texnoloji həllər ilə VEB səhifələrin hazırlanmasıdır.</span></h2>
+                <h2 data-aos="fade-up" data-aos-delay="400"><span>Öz Biznesinizi onlayn məkanda tanıtmaq üçün bizim
+                        peşəkar komandanın xidmətlərindən yararlana bilərsiz.Bizim missiyamız ən müasir texnoloji həllər
+                        ilə VEB səhifələrin hazırlanmasıdır.</span></h2>
                 <h4 class="pt-3" data-aos="fade-up" data-aos-delay="500">İşiniz İşimizdir!</h4>
                 <div data-aos="fade-up" data-aos-delay="600">
                     <div class="">
@@ -42,43 +44,42 @@
                 <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
                     <div class="box" data-aos="fade-up" data-aos-delay="200">
                         <img src="{% static 'img/services-1.png' %}" class="img-fluid" alt="">
-                        <h3>Saytların Hazırlanması</h3>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
-                    <div class="box" data-aos="fade-up" data-aos-delay="400">
-                        <img src="{% static 'img/services-2.png' %}" class="img-fluid" alt="">
-                        <h3>Server Nəzarəti və hostings</h3>
+                        <h3><a href="{% url 'site_services' %}">Saytların Hazırlanması</a></h3>
                     </div>
                 </div>
 
                 <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
                     <div class="box" data-aos="fade-up" data-aos-delay="400">
                         <img src="{% static 'img/services-3.png' %}" class="img-fluid" alt="">
-                        <h3>Texniki dəstək</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
-                    <div class="box" data-aos="fade-up" data-aos-delay="200">
-                        <img src="{% static 'img/services-4.png' %}" class="img-fluid" alt="">
-                        <h3>Seo Xidmeti</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
-                    <div class="box" data-aos="fade-up" data-aos-delay="400">
-                        <img src="{% static 'img/services-5.png' %}" class="img-fluid" alt="">
-                        <h3>Dizayn xidməti</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
-                    <div class="box" data-aos="fade-up" data-aos-delay="600">
-                        <img src="{% static 'img/services-61.png' %}" class="img-fluid" alt="">
-                        <h3>SMM Xİdməti</h3>
+                        <h3><a href="{% url 'technical_services' %}">Texniki Dəstək</a></h3>
                     </div>
                 </div>
 
+                <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+                    <div class="box" data-aos="fade-up" data-aos-delay="200">
+                        <img src="{% static 'img/services-4.png' %}" class="img-fluid" alt="">
+                        <h3><a href="{% url 'seo_services' %}">Seo Xidməti</a></h3>
+                    </div>
+                </div>
             </div>
+            <div class="row col-center">
+                <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+                    <div class="box" data-aos="fade-up" data-aos-delay="400">
+                        <img src="{% static 'img/services-5.png' %}" class="img-fluid" alt="">
+                        <h3><a href="{% url 'design_services' %}">Dizayn Xidməti</a></h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4 mt-lg-0 pb-4">
+                    <div class="box" data-aos="fade-up" data-aos-delay="600">
+                        <img src="{% static 'img/services-6.png' %}" class="img-fluid" alt="">
+                        <h3><a href="{% url 'smm_services' %}">SMM Xidməti</a></h3>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 
         </div>
 
@@ -100,11 +101,13 @@
                     <div class="portfolio-wrap">
                         <img src="{{project.picture.url}}" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <a href="#"><h4>{{project.name}}</h4></a>
+                            <a href="#">
+                                <h4>{{project.name}}</h4>
+                            </a>
                             <div class="portfolio-links">
                                 <a href="{{project.picture.url}}" data-gallery="portfolioGallery"
                                     class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
-                           </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,9 +139,9 @@
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box">
                         <div class="box-header silver">
-                            <h3>Silver Paket</h3>
+                            <h3>SİLVER PAKET</h3>
                         </div>
-                        <div class="price"><sup>$</sup>0</span></div>
+                        <div class="price"><sup>₼</sup>499</span></div>
                         <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
                         <table class="table">
                             <tr>
@@ -146,7 +149,7 @@
                                 <td>3 ay</td>
                             </tr>
                             <tr>
-                                <th>Mobil Versiya</th>
+                                <th>Responsivlilik</th>
                                 <td>Var</td>
                             </tr>
                             <tr>
@@ -155,20 +158,20 @@
                             </tr>
                             <tr>
                                 <th>Seo Optimizasiya</th>
-                                <td>Daxili</td>
+                                <td>Daxildir</td>
                             </tr>
                         </table>
                         <div>
-                            <a href="#" class="btn-buy btn-silver">Sifariş et</a>
+                            <a href="#" class="btn-buy btn-silver">SİFARİŞ ET</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box">
                         <div class="box-header gold">
-                            <h3>Gold Paket</h3>
+                            <h3>GOLD PAKET</h3>
                         </div>
-                        <div class="price"><sup>$</sup>0</span></div>
+                        <div class="price"><sup>₼</sup>699-1499</span></div>
                         <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
                         <table class="table">
                             <tr>
@@ -176,7 +179,7 @@
                                 <td>3 ay</td>
                             </tr>
                             <tr>
-                                <th>Mobil Versiya</th>
+                                <th>Responsivlilik</th>
                                 <td>Var</td>
                             </tr>
                             <tr>
@@ -185,18 +188,18 @@
                             </tr>
                             <tr>
                                 <th>Seo Optimizasiya</th>
-                                <td>Daxili</td>
+                                <td>Daxildir</td>
                             </tr>
                         </table>
-                        <a href="#" class="btn-buy btn-gold">Buy Now</a>
+                        <a href="#" class="btn-buy btn-gold">SİFARİŞ ET</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="box">
                         <div class="box-header premium">
-                            <h3>Premium Paket</h3>
+                            <h3>PLATİN PAKET</h3>
                         </div>
-                        <div class="price"><sup>$</sup>0</span></div>
+                        <div class="price"><sup>₼</sup>1500+</span></div>
                         <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
                         <table class="table">
                             <tr>
@@ -204,7 +207,7 @@
                                 <td>3 ay</td>
                             </tr>
                             <tr>
-                                <th>Mobil Versiya</th>
+                                <th>Responsivlilik</th>
                                 <td>Var</td>
                             </tr>
                             <tr>
@@ -213,10 +216,10 @@
                             </tr>
                             <tr>
                                 <th>Seo Optimizasiya</th>
-                                <td>Daxili</td>
+                                <td>Daxildir</td>
                             </tr>
                         </table>
-                        <a href="#" class="btn-buy btn-premium">Buy Now</a>
+                        <a href="#" class="btn-buy btn-premium">SİFARİŞ ET</a>
                     </div>
                 </div>
             </div>

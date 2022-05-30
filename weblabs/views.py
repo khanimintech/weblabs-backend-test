@@ -32,7 +32,27 @@ def about(request):
 
 def services(request):
 
-    return render (request, 'index.html')
+    return render (request, 'services.html')
+
+def site_services(request):
+    
+    return render (request, 'site_services.html')
+
+def technical_services(request):
+    
+    return render (request, 'technical_services.html')
+
+def seo_services(request):
+        
+    return render (request, 'seo_services.html')
+
+def design_services(request):
+        
+    return render (request, 'design_services.html')
+
+def smm_services(request):
+        
+    return render (request, 'smm_services.html')
 
 def all_projects(request):
     search=request.GET.get('search')
