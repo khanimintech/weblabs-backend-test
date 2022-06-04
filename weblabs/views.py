@@ -88,9 +88,9 @@ def contact(request):
             name=form.cleaned_data.get('name')
             surname=form.cleaned_data.get('surname')
             email=form.cleaned_data.get('email')
-            message=f"Hormetli {name} {surname} mesajiniz catdi"
+            message=f"Hormetli {name} {surname} mesajınız çatdı. Sizinlə tezliklə əlaqə saxlanılacaq. Təşəkkürlər!"
             send_mail(
-                subject='weblabs.az',
+                subject='weblabs',
                 message=message,
                 from_email=None,
                 recipient_list=[email],

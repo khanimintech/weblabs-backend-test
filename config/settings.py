@@ -158,9 +158,9 @@ else:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.internet.ru'
 EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL='khanimintech@gmail.com'
-EMAIL_HOST_USER = 'khanimintech@gmail.com'
-EMAIL_HOST_PASSWORD = 'Eg654321@'
+EMAIL_PORT = 465
+DEFAULT_FROM_EMAIL='weblabs.org@internet.ru'
+EMAIL_HOST_USER = 'weblabs.org@internet.ru'
+EMAIL_HOST_PASSWORD = '33743300n'
